@@ -28,13 +28,41 @@ const Tickts = ({TicktsLoadingPromise,onCardClick,onComplete ,selectedTask,resol
 
        <div className='flex justify-between'>
          <h2 className="card-title">{tickt.title}</h2>
-         <button className='bg-[#B9F8CF] px-[5px] rounded-4xl  py-[4px] text-[#0B5E06] mx-[10px]'><span><div aria-label="success" className="status mr-1 status-success bg-[#02A53B]"></div>
-</span>{tickt.status}</button>
+ 
+  
+ {tickt.status === 'In-Progress' ? (
+          <button className='bg-yellow-100 text-yellow-700 px-3 py-1 rounded-2xl mx-[10px] flex items-center'>
+            
+            <span className="ml-1">{tickt.status}</span>
+          </button>
+        ) : tickt.status === 'Open' ? (
+          <button className='bg-green-200 text-green-700 px-3 py-1 rounded-2xl mx-[10px] flex items-center'>
+            <span className="ml-1"><span className='pr-[5px]'><div aria-label="success" className="status status-success"></div>
+</span>{tickt.status}</span>
+          </button>
+        ) : (
+          <button className='bg-yellow-100 text-yellow-200-700 px-3 py-1 rounded-2xl mx-[10px] flex items-center'>
+            <span className="ml-1"><span className='pr-[4px]'><div aria-label="warning" className="status status-warning bg-amber-300"></div>
+</span>{tickt.status}</span>
+          </button>
+        )}
+
+         {/* <button className='bg-[#B9F8CF] px-[5px] rounded-4xl  py-[4px] text-[#0B5E06] mx-[10px]'><span><div aria-label="success" className="status mr-1 status-success bg-[#02A53B]"></div>
+</span>{tickt.status}</button> */}
+
+
+
+
+
        </div>
     <p className='text-[#627382] text-[1rem] '>{tickt.description}</p>
     <div className="flex justify-between items-center">
           <div className='flex justify-evenly items-center space-x-1'>
             <p className='text-[#627382] text-[1rem] '>#<span>{tickt.id}</span></p>
+
+
+
+
             <p className='text-[#F83044] text-[0.875rem] font-medium'><span>{tickt.priority}</span> PRIORITY</p>
           </div>
 
