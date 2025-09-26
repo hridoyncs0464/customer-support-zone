@@ -2,31 +2,12 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar  bg-base-100  shadow-sm">
   <div className="navbar-start">
-  
-    <a className=" text-xl font-bold">CS — Ticket System</a>
+   <a className=" text-xl font-bold">CS — Ticket System</a>
   </div>
-
-
-  {/* <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div> */}
- 
-  <div className="navbar-end">
-    <div className="flex-none">
+ <div className="navbar-end ">
+    <div className="hidden sm:flex ">
     <ul className="menu menu-horizontal px-1">
       <li><a>Home</a></li>
       <li><a>FAQ</a></li>
@@ -36,8 +17,8 @@ const Navbar = () => {
       <li><a>Contact</a></li>
      
 
-    </ul>
-  </div>
+        </ul>
+     </div>
     <a style={{ background: 'linear-gradient(90deg, #632EE3 0%, #9F62F2 100%)' }} className="btn text-white">+  New Ticket</a>
   </div> 
 </div>
