@@ -42,7 +42,7 @@ function App() {
       if(ids.has(tickObj.id)){
         return prev;}
     
-      setProgressCount(count => count+1/2);
+      setProgressCount(count => count+1);
         return [...prev,tickObj];
     });
     
