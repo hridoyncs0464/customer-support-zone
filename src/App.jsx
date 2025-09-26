@@ -71,7 +71,7 @@ toast.success('Removed!');
            resolvedTasks={resolvedTasks}
           handleRemoveResolved={handleRemoveResolved}
          ></Tickts>
-
+      
       </Suspense>
  
       <Footer></Footer>
